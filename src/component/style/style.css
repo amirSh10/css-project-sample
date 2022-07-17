@@ -1,0 +1,39 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.flex_of_main_tag{
+    display: flex;
+    justify-content: center;
+    background-color:lightgoldenrodyellow;
+}
+
+.flex_of_body_tag{
+    display: flex;
+    justify-content:center ;
+    flex-direction: row;
+    background-color: #fff;
+    margin: 10px;
+    border-radius:15px;
+    border: 0.1px solid black;
+}
+
+.flex_of_section_tag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.styel_of_header_article{
+    padding: 10px 100px 50px 100px;
+    font-size: 1.3rem;
+    font-family: "Open Sans";
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.style_of_text_article{
+    padding:2px 0px 10px 20px ;
+}
