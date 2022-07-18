@@ -30,7 +30,7 @@ body{
     
 }
 
-.aa{
+.flex_of_header_date{
     display: flex;
     justify-content: center;
 }
@@ -48,4 +48,32 @@ body{
 .margin_of_filedset{
     margin: 30px;
     border: 1px solid gray;
+}
+
+.flex_of_form_cloume{
+    display: flex;
+    flex-direction: column;
+}
+
+.style_of_label_form{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+.style_of_each_label_and_input_form{
+    padding: 10px 3px;
+    
+}
+
+.style_of_input_form{
+    width: 40%;
+    height: 30px;
+    border: 0.1px solid gray;
+    border-radius: 5px;
+}
+
+.ac{
+    display: inline-block; 
+  width: 80px;
+  text-align: right ;
 }
