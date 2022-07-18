@@ -12,6 +12,7 @@ body{
 }
 
 .flex_of_body_tag{
+    width: 70%;
     display: flex;
     justify-content:center ;
     flex-direction: row;
@@ -22,13 +23,20 @@ body{
 }
 
 .flex_of_section_tag{
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    
+}
+
+.aa{
+    display: flex;
     justify-content: center;
 }
 
 .styel_of_header_article{
-    padding: 10px 100px 50px 100px;
+    padding:10px;
     font-size: 1.3rem;
     font-family: "Open Sans";
     font-weight: 600;
@@ -36,4 +44,8 @@ body{
 }
 .style_of_text_article{
     padding:2px 0px 10px 20px ;
+}
+.margin_of_filedset{
+    margin: 30px;
+    border: 1px solid gray;
 }
