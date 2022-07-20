@@ -27,7 +27,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
 
 .flex_of_header_date{
@@ -76,4 +75,32 @@ body{
     display: inline-block; 
   width: 80px;
   text-align: right ;
+}
+
+.flex_of_select_option_row{
+    display: flex;
+    flex-direction: row;
+}
+
+.style_of_btn_servery_form{
+    width: 100px;
+    height: 50px;
+    border: none;
+    background-color: red;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.second_style_of_btn_send{
+    width: 20%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.flex_of_btn_to_set_center{
+   
+    display: flex;
+    justify-content: center;
 }
