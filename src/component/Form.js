@@ -1,5 +1,15 @@
+import React from "react";
 import "./style/style.css";
 function Form_date() {
+  const[name,setName]=React.useState("")
+  const[address,setAddress]=React.useState("")
+  const[email,setEmail]=React.useState("")
+  const[phoneNumber,setPhoneNumber]=React.useState("")
+  const[iq,setIq]=React.useState("")
+  const[gender,setGender]=React.useState("")
+  const[date,setDate]=React.useState("")
+  const[bb,setBB]=React.useState({})
+  console.log(bb)
   return (
     <>
       <main className="flex_of_main_tag">
@@ -27,6 +37,8 @@ function Form_date() {
                         type="Text"
                         className="style_of_input_form"
                         placeholder="Enter your name"
+                        value={name}
+                        onChange={(x)=>setName(x.target.value)}
                       ></input>
                     </div>
                     <div className="style_of_each_label_and_input_form">
@@ -35,6 +47,8 @@ function Form_date() {
                         type="Text"
                         className="style_of_input_form"
                         placeholder="Enter your address"
+                        value={address}
+                        onChange={(x)=>setAddress(x.target.value)}
                       ></input>
                     </div>
                     <div className="style_of_each_label_and_input_form">
@@ -43,6 +57,8 @@ function Form_date() {
                         type="Email"
                         className="style_of_input_form"
                         placeholder="Enter your email"
+                        value={email}
+                        onChange={(x)=>setEmail(x.target.value)}
                       ></input>
                     </div>
                     <div className="style_of_each_label_and_input_form">
@@ -53,6 +69,8 @@ function Form_date() {
                         type="Number"
                         className="style_of_input_form"
                         placeholder="Enter your number"
+                        value={phoneNumber}
+                        onChange={(x)=>setPhoneNumber(x.target.value)}
                       ></input>
                     </div>
                     <div className="style_of_each_label_and_input_form">
@@ -61,6 +79,8 @@ function Form_date() {
                         type={"number"}
                         className="style_of_input_form"
                         placeholder="Enter your IQ"
+                        value={iq}
+                        onChange={(x)=>setIq(x.target.value)}
                       ></input>
                     </div>
                     <div>
@@ -70,14 +90,14 @@ function Form_date() {
                           type={"radio"}
                           name="gender"
                           value={"male"}
-                          checked
+                          onChange={(x)=>setGender(x.target.value)}
                         />
                         Male
                         <br></br>
-                        <input type={"radio"} name="gender" value={"female"} />
+                        <input type={"radio"} name="gender" value={"female"}  onChange={(x)=>setGender(x.target.value)} />
                         female
                         <br></br>
-                        <input type={"radio"} name="gender" value={"other"} />
+                        <input type={"radio"} name="gender" value={"other"}   onChange={(x)=>setGender(x.target.value)}/>
                         other
                       </p>
                     </div>
@@ -89,6 +109,8 @@ function Form_date() {
                         type="date"
                         className="style_of_input_form"
                         placeholder="Enter your number"
+                        value={date}
+                        onChange={(x)=>setDate(x.target.value)}
                       ></input>
                     </div>
                   </div>
@@ -100,13 +122,13 @@ function Form_date() {
                   <div className="flex_of_form_cloume">
                     <div>
                       <label className="style_of_label_form">
-                        <input type={"checkbox"}></input> I have tattoos and/or
+                        <input type={"checkbox"} value={"I have tattoos and/or piercings"} onChange={(x)=>setBB({family:x.target.value})}></input> I have tattoos and/or
                         piercings
                       </label>
                     </div>
                     <div>
                       <label className="style_of_label_form">
-                        <input type={"checkbox"}></input> I am more than 2 years
+                        <input type={"checkbox"} value={"I am more than 2 years older than my daughter"} onChange={(x)=>setBB({name:x.target.value})}></input> I am more than 2 years
                         older than my daughter
                       </label>
                     </div>
