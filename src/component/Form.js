@@ -39,6 +39,7 @@ function Form_date() {
                         placeholder="Enter your name"
                         value={name}
                         onChange={(x)=>setName(x.target.value)}
+                        required
                       ></input>
                     </div>
                     <div className="style_of_each_label_and_input_form">
@@ -49,6 +50,7 @@ function Form_date() {
                         placeholder="Enter your address"
                         value={address}
                         onChange={(x)=>setAddress(x.target.value)}
+                        required
                       ></input>
                     </div>
                     <div className="style_of_each_label_and_input_form">
@@ -59,6 +61,7 @@ function Form_date() {
                         placeholder="Enter your email"
                         value={email}
                         onChange={(x)=>setEmail(x.target.value)}
+                        required
                       ></input>
                     </div>
                     <div className="style_of_each_label_and_input_form">
@@ -71,6 +74,7 @@ function Form_date() {
                         placeholder="Enter your number"
                         value={phoneNumber}
                         onChange={(x)=>setPhoneNumber(x.target.value)}
+                        required
                       ></input>
                     </div>
                     <div className="style_of_each_label_and_input_form">
@@ -91,6 +95,7 @@ function Form_date() {
                           name="gender"
                           value={"male"}
                           onChange={(x)=>setGender(x.target.value)}
+                          required
                         />
                         Male
                         <br></br>
@@ -111,6 +116,7 @@ function Form_date() {
                         placeholder="Enter your number"
                         value={date}
                         onChange={(x)=>setDate(x.target.value)}
+                        required
                       ></input>
                     </div>
                   </div>
@@ -161,7 +167,7 @@ function Form_date() {
                     <div>
                       <label>
                         Political Persuasion:{" "}
-                        <select>
+                        <select required>
                           <option>Left Wing</option>
                           <option>Right Wing</option>
                           <option>Conservative</option>
@@ -172,7 +178,7 @@ function Form_date() {
                     <div>
                       <label>
                         Education Level Completed::{" "}
-                        <select>
+                        <select required>
                           <option>University</option>
                           <option>College</option>
                           <option>High School </option>
@@ -196,6 +202,7 @@ function Form_date() {
                     cols={50}
                     rows={5}
                     style={{ resize: "none" }}
+                    required
                   ></textarea>
                   <p className="">
                     <b>Please upload contact details for 2 references</b>
@@ -205,12 +212,13 @@ function Form_date() {
                     cols={50}
                     rows={5}
                     style={{ resize: "none" }}
+                    required
                   ></textarea>
                   <p className="">
                     <b>
                     Upload Police Clearance Certificate, Bank Statement and Medical Certifiates here:
                     </b>
-                    <button className="style_of_btn_servery_form">Attach Files</button>
+                    <input type={'file'} ></input>
                   </p>
                 </fieldset>
                 <div className="flex_of_btn_to_set_center">
