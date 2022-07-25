@@ -104,3 +104,8 @@ body{
     display: flex;
     justify-content: center;
 }
+
+.flex_of_err{
+    display: flex;
+    justify-content: center;
+}

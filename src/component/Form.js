@@ -8,8 +8,19 @@ function Form_date() {
   const[iq,setIq]=React.useState("")
   const[gender,setGender]=React.useState("")
   const[date,setDate]=React.useState("")
-  const[bb,setBB]=React.useState({})
-  console.log(bb)
+  const[haveTattoos,setHaveTattoos]=React.useState("")
+  const[political,setPolitical]=React.useState("")
+  const[education ,setEducation ]=React.useState("")
+  const[explainYourSelf ,setExplainYourSelf ]=React.useState("")
+  const[uploadContact ,setUploadContact ]=React.useState("")
+  const[err,setErr]=React.useState([])
+  console.log(err)
+
+  
+
+  let ckeckApply=[];
+  ckeckApply.push(haveTattoos);
+  // console.log(political)
   return (
     <>
       <main className="flex_of_main_tag">
@@ -39,7 +50,7 @@ function Form_date() {
                         placeholder="Enter your name"
                         value={name}
                         onChange={(x)=>setName(x.target.value)}
-                        required
+                        
                       ></input>
                     </div>
                     <div className="style_of_each_label_and_input_form">
@@ -50,18 +61,18 @@ function Form_date() {
                         placeholder="Enter your address"
                         value={address}
                         onChange={(x)=>setAddress(x.target.value)}
-                        required
+                        
                       ></input>
                     </div>
                     <div className="style_of_each_label_and_input_form">
                       <label className="style_of_label_form">Email:</label>
                       <input
-                        type="Email"
+                        // type="Email"
                         className="style_of_input_form"
                         placeholder="Enter your email"
                         value={email}
                         onChange={(x)=>setEmail(x.target.value)}
-                        required
+                        
                       ></input>
                     </div>
                     <div className="style_of_each_label_and_input_form">
@@ -74,7 +85,7 @@ function Form_date() {
                         placeholder="Enter your number"
                         value={phoneNumber}
                         onChange={(x)=>setPhoneNumber(x.target.value)}
-                        required
+                        
                       ></input>
                     </div>
                     <div className="style_of_each_label_and_input_form">
@@ -95,7 +106,7 @@ function Form_date() {
                           name="gender"
                           value={"male"}
                           onChange={(x)=>setGender(x.target.value)}
-                          required
+                          
                         />
                         Male
                         <br></br>
@@ -116,7 +127,7 @@ function Form_date() {
                         placeholder="Enter your number"
                         value={date}
                         onChange={(x)=>setDate(x.target.value)}
-                        required
+                        
                       ></input>
                     </div>
                   </div>
@@ -128,35 +139,35 @@ function Form_date() {
                   <div className="flex_of_form_cloume">
                     <div>
                       <label className="style_of_label_form">
-                        <input type={"checkbox"} value={"I have tattoos and/or piercings"} onChange={(x)=>setBB({family:x.target.value})}></input> I have tattoos and/or
+                        <input type={"checkbox"} value={"I have tattoos and/or piercings"} onChange={(x)=>setHaveTattoos({tattoo:x.target.value})}></input> I have tattoos and/or
                         piercings
                       </label>
                     </div>
                     <div>
                       <label className="style_of_label_form">
-                        <input type={"checkbox"} value={"I am more than 2 years older than my daughter"} onChange={(x)=>setBB({name:x.target.value})}></input> I am more than 2 years
+                        <input type={"checkbox"} value={"I am more than 2 years older than my daughter"} onChange={(x)=>setHaveTattoos({older:x.target.value})}></input> I am more than 2 years
                         older than my daughter
                       </label>
                     </div>
                     <div>
                       <label className="style_of_label_form">
-                        <input type={"checkbox"}></input> I own a panel van or
+                        <input type={"checkbox"} value={"I own a panel van or V8 ute"} onChange={(x)=>setHaveTattoos({car:x.target.value})}></input> I own a panel van or
                         V8 ute
                       </label>
                     </div>
                     <div>
                       <label className="style_of_label_form">
-                        <input type={"checkbox"}></input> I work full-time
+                        <input type={"checkbox"} value={"I work full-time"} onChange={(x)=>setHaveTattoos({work:x.target.value})}></input> I work full-time
                       </label>
                     </div>
                     <div>
                       <label className="style_of_label_form">
-                        <input type={"checkbox"}></input> My parents are rich
+                        <input type={"checkbox"} value={" My parents are rich"} onChange={(x)=>setHaveTattoos({rich:x.target.value})}></input> My parents are rich
                       </label>
                     </div>
                     <div>
                       <label className="style_of_label_form">
-                        <input type={"checkbox"}></input> Is the date at a well
+                        <input type={"checkbox"} value={"Is the date at a well lit public location"} onChange={(x)=>setHaveTattoos({public:x.target.value})}></input> Is the date at a well
                         lit public location
                       </label>
                     </div>
@@ -167,7 +178,7 @@ function Form_date() {
                     <div>
                       <label>
                         Political Persuasion:{" "}
-                        <select required>
+                        <select  onChange={(x)=>setPolitical(x.target.value)}>
                           <option>Left Wing</option>
                           <option>Right Wing</option>
                           <option>Conservative</option>
@@ -178,7 +189,7 @@ function Form_date() {
                     <div>
                       <label>
                         Education Level Completed::{" "}
-                        <select required>
+                        <select  onChange={(x)=>setEducation(x.target.value)}>
                           <option>University</option>
                           <option>College</option>
                           <option>High School </option>
@@ -202,7 +213,8 @@ function Form_date() {
                     cols={50}
                     rows={5}
                     style={{ resize: "none" }}
-                    required
+                    
+                    onChange={(x)=>setExplainYourSelf(x.target.value)}
                   ></textarea>
                   <p className="">
                     <b>Please upload contact details for 2 references</b>
@@ -212,7 +224,8 @@ function Form_date() {
                     cols={50}
                     rows={5}
                     style={{ resize: "none" }}
-                    required
+                    
+                    onChange={(x)=>setUploadContact(x.target.value)}
                   ></textarea>
                   <p className="">
                     <b>
@@ -221,10 +234,41 @@ function Form_date() {
                     <input type={'file'} ></input>
                   </p>
                 </fieldset>
-                <div className="flex_of_btn_to_set_center">
-                <button className="style_of_btn_servery_form second_style_of_btn_send"> Send Your Application</button>
-                </div>
+               
               </form>
+              <div className="flex_of_err">
+                <h3 style={err.error==true?{color:"green"}:{color:"red"}}>{err.message}</h3>
+              </div>
+              <div className="flex_of_btn_to_set_center">
+                <button className="style_of_btn_servery_form second_style_of_btn_send"
+                onClick={()=>{
+                  fetch("http://localhost:3001/api/apis/addPerson",{
+                    method:"POST",
+                    body:JSON.stringify({
+                      name:name,
+                      address:address,
+                      email:email,
+                      phoneNumber:phoneNumber,
+                      IQ:iq,
+                      gender:gender,
+                      dateOuting:date,
+                      checkApply:[ckeckApply],
+                      PoliticalPersuasion:political,
+                      EducationLevelCompleted:education,
+                      whyYouWantToDateMyDaughter:explainYourSelf,
+                      contactDetails:uploadContact,
+                    }),
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                  })
+                  .then((x) => x.json())
+                  .then((x)=>{
+                    setErr(x)
+                  })
+                }}
+                > Send Your Application</button>
+                </div>
             </div>
           </section>
         </body>
